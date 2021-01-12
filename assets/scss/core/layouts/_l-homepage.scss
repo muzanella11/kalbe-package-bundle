@@ -1,0 +1,97 @@
+/******************************************
+  Some tips for creating layouts :
+  - Add `l` prefix before the name of layouts
+  - Or Just copy paste this structure of styling code into your new layouts styling file
+  - Dont forget to register your layouts into `_layouts.scss`
+******************************************/
+
+/** This Place For Layouts Homepage **/
+.#{$namespace} {
+  & .l-homepage {
+    position: relative;
+    height: 100vh;
+    background: #FFFFA7;
+
+    & .homepage {
+      &__section {
+        &.section {
+          &--greetings {
+            padding: 16px;
+          }
+
+          &--content {
+            padding: 64px;
+          }
+
+          &--footer {
+            text-align: right;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    [class*="flex-row"] {
+      display: flex;
+      justify-content: center;
+    }
+
+    & .flex-row {
+      &-a {
+        & .photo {
+          background: #04AD05;
+        }
+      }
+
+      &-b {
+        & .photo {
+          background: #7DC623;
+        }
+      }
+
+      &-c {
+        & .photo {
+          background: #04AD05;
+        }
+      }
+    }
+
+    & .box {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      transform: rotate(45deg);
+      margin: -12px 26px;
+      overflow: hidden;
+      position: relative;
+      transition: 0.3s;
+
+      &:first-child {
+        display: none;
+      }
+
+      &:last-child {
+        display: none;
+      }
+
+      &:hover {
+        transform: scale(1.05) rotate(45deg);
+      }
+    }
+
+    & .photo {
+      position: absolute;
+      transform: rotate(-45deg);
+      width: 165%;
+      height: 180%;
+      top: -50px;
+      left: -50px;
+      background-position: 0 30px;
+      background-image: url(https://somosmulheresreais.files.wordpress.com/2010/01/faustao.jpeg);
+    }
+  }
+}
+
+/* ************************************ */
